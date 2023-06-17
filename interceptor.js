@@ -11,7 +11,7 @@
     'use strict';
 
     // Replace watch.min.js with your own script URL
-    var yourScriptUrl = 'http://zoro.to/your-script.js';
+    var yourScriptUrl = 'https://raw.githubusercontent.com/ivhristov/devtools-detection-bypass/main/watch.js';
 
     // Find and replace the script element
     var scriptElement = document.querySelector('script[src="/js/watch.min.js?v=2.2"]');
