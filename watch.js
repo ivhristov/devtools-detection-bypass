@@ -657,11 +657,7 @@
     !(function (e, t) {
         "object" == typeof exports && "object" == typeof module
             ? (module.exports = t())
-            : "function" == typeof define && define.amd
-            ? define([], t)
-            : "object" == typeof exports
-            ? (exports.devtoolsDetector = t())
-            : (e.devtoolsDetector = t());
+            : "function" == typeof define && define.amd;
     })("undefined" != typeof self ? self : this, function () {
         return (
             (n = [
@@ -795,14 +791,7 @@
                         });
                     var i = n(7),
                         o = n(8),
-                        r =
-                            (n.d(t, "DevtoolsDetector", function () {
-                                return i.a;
-                            }),
-                            n.d(t, "checkers", function () {
-                                return o;
-                            }),
-                            n(0)),
+                        r = null,
                         a =
                             (n.d(t, "match", function () {
                                 return r.b;
@@ -2324,13 +2313,7 @@
     });
 const md = new MobileDetect(window.navigator.userAgent);
 md.match("playstation|xbox") ||
-    null !== md.mobile() ||
-    (devtoolsDetector.addListener(function (e) {
-        var t = new URL(window.location.href),
-            t = new URLSearchParams(t.search);
-        e && "ok" !== t.get("_debug") && (window.location.href = "/home");
-    }),
-    devtoolsDetector.launch());
+    null !== md.mobile();
 var cmSort = "newest",
     commentLoading = !1,
     commentLoaded = !1;
